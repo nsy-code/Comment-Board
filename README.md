@@ -4,14 +4,15 @@ This is a Comment / Message board.
 The user can post the comments and the comments are displayed below. The app stores and loads the data from the local Storage. It also displays the time of the comment that has been post.
 
 ## Installation 
-It start with 
-```npx create-react-app comment-app```
-use redux
-```npm install redux react-redux```
-use Selector
-```npm install reselect```
-
+It start with <br />
+```npx create-react-app comment-app``` <br />
+use redux <br />
+```npm install redux react-redux``` <br />
+use Selector <br />
+```npm install reselect``` <br />
+ 
 ## The file structure
+```
 ───src
     │   index.jsx
     │
@@ -34,7 +35,7 @@ use Selector
         │
         └───ducks
                 comments.jsx
-
+```
 /components folder contains reusable dumb components which only display data.
 /containers folder contains smart components which handle the data flow and pass it to the correspond components.
 /reducers   folder contains the file that defines the reducers, actions, action types.
