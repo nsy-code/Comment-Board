@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CommentList from '../components/CommentList'
-import { initComments, deleteComment } from '../reducers/ducks/comments'
+import { initComments, deleteComment, selector } from '../reducers/ducks/comments'
 
 // It is a smart container which init, load and delete data
 class CommentListContainer extends React.PureComponent {
@@ -48,12 +48,6 @@ CommentListContainer.propTypes = {
     onDeleteComment: PropTypes.func
 }
 
-const mapStateToProps = (state) => {
-    return {
-        comments: state.comments.comments
-    }
-}
-
 const mapDispatchToProps = (dispatch) => {
     return {
         initComments: (comments) => {
@@ -65,4 +59,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentListContainer)
+export default connect(selector, mapDispatchToProps)(CommentListContainer)

@@ -2,14 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CommentInput from '../components/CommentInput'
-import { addComment } from '../reducers/ducks/comments'
+import { addComment, selector } from '../reducers/ducks/comments'
 
 class CommentInputContainer extends Component {
-    static propTypes = {
-        comments: PropTypes.array,
-        onSubmit: PropTypes.func
-    }
-
     constructor() {
         super()
         this.state = { username: '' }
@@ -56,10 +51,9 @@ class CommentInputContainer extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        comments: state.comments.comments
-    }
+CommentInputContainer.propTypes = {
+    comments: PropTypes.array,
+    onSubmit: PropTypes.func
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -71,6 +65,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(
-    mapStateToProps,
+    selector,
     mapDispatchToProps
 )(CommentInputContainer)

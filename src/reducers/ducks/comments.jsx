@@ -1,3 +1,5 @@
+import { createStructuredSelector } from 'reselect'
+
 // action types
 const INIT_COMMENTS = 'INIT_COMMENTS'
 const ADD_COMMENT = 'ADD_COMMENT'
@@ -36,3 +38,9 @@ export const addComment = (comment) => {
 export const deleteComment = (commentIndex) => {
     return { type: DELETE_COMMENT, commentIndex }
 }
+
+// selectors
+export const commentSelectors = {
+    comments: (state) => state.comments.comments
+}
+export const selector = createStructuredSelector(commentSelectors)
