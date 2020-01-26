@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CommentInput from '../components/CommentInput'
 import { addComment, selector } from '../reducers/ducks/comments'
 
-class CommentInputContainer extends Component {
+class CommentInputContainer extends React.PureComponent {
     constructor() {
         super()
         this.state = { username: '' }
@@ -35,7 +35,6 @@ class CommentInputContainer extends Component {
         const { comments } = this.props
         const newComments = [...comments, comment]
         localStorage.setItem('comments', JSON.stringify(newComments))
-        // submitComment(comment);
         if (this.props.onSubmit) {
             this.props.onSubmit(comment)
         }
