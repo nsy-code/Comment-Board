@@ -9,7 +9,7 @@
 
 <a name="appinfo"></a>
 ## Description
-The user can post the comments and the comments are displayed below. The app stores and loads the data from the local Storage. It also displays the time of the comment that has been post.
+The user can post the comments and the comments are displayed below. The app stores and loads the data from the local Storage. It also displays the time of the comment that has been post.<br>
 ![image](./report/font.PNG)
  <a name="design"></a>
 ## The file structure
