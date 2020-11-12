@@ -1,47 +1,22 @@
-This is a Comment / Message board.
 
-![image](./report/font.PNG)
+## Table of Content
+1. [Description](#appinfo)
+2. [Design](#design)
+3. [Features](#features)
+4. [Installation](#installation)
+5. [Reference](#reference)
 
+
+<a name="appinfo"></a>
 ## Description
 The user can post the comments and the comments are displayed below. The app stores and loads the data from the local Storage. It also displays the time of the comment that has been post.
-
-## Installation 
-It start with <br />
-```npx create-react-app comment-app``` <br />
-use redux <br />
-```npm install redux react-redux``` <br />
-use Selector <br />
-```npm install reselect``` <br />
- 
+![image](./report/font.PNG)
+ <a name="design"></a>
 ## The file structure
-```
-───src
-    │   index.jsx
-    │
-    ├───components
-    │       Comment.css
-    │       Comment.jsx
-    │       CommentInput.css
-    │       CommentInput.jsx
-    │       CommentList.css
-    │       CommentList.jsx
-    │
-    ├───containers
-    │       CommentApp.css
-    │       CommentApp.jsx
-    │       CommentInputContainer.jsx
-    │       CommentListContainer.jsx
-    │
-    └───reducers
-        │   combineReducers.jsx
-        │
-        └───ducks
-                comments.jsx
-```
-/components folder contains reusable dumb components which only display data.
-/containers folder contains smart components which handle the data flow and pass it to the correspond components.
-/reducers   folder contains the file that defines the reducers, actions, action types.
-
+/components folder contains reusable dumb components which only display data.<br>
+/containers folder contains smart components which handle the data flow and pass it to the correspond components.<br>
+/reducers   folder contains the file that defines the reducers, actions, action types.<br>
+<a name="features"></a>
 ## Techniques
 It follows [Container Componenet Presentational Component Architecture ](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) From Dan Abromov to seperate the components and containers.
 
@@ -77,3 +52,14 @@ export const commentSelectors = {
 }
 export const selector = createStructuredSelector(commentSelectors)
 ```
+<a name="installation"></a>
+## Installation 
+It start with <br />
+```npx create-react-app comment-app``` <br />
+use redux <br />
+```npm install redux react-redux``` <br />
+use Selector <br />
+```npm install reselect``` <br />
+<a name="reference"></a>
+## Reference
+[React.js 小书] http://huziketang.mangojuice.top/books/react/
